@@ -14,7 +14,7 @@ rm -rf gateway
 
 echo "> cloning fresh protos..."
 rm -rf proto
-git clone https://github.com/pylonbot/pylon-gateway-protobuf.git proto
+git clone https://github.com/captcha-bot/protobufs.git proto
 
 echo "> generating code"
 protoc -Iproto --go_out=. \
@@ -22,7 +22,7 @@ protoc -Iproto --go_out=. \
     $(find ./ -type f -name "*.proto" | grep -v google)
 
 echo "> re-organizing directories..."
-mv ./github.com/pylonbot/pylon-gateway-protobuf-go/* ./
+mv ./github.com/captcha-bot/protobuf-go/* ./
 
 echo "> go mod tidy"
 go mod tidy
