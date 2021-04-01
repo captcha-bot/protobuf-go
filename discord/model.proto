@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package captcha.discord.model;
+option go_package =
+    "github.com/captcha-bot/protobuf-go/discord/model";
+
+message MessageData {
+  fixed64 id = 1 [jstype = JS_STRING];
+  fixed64 channel_id = 2 [jstype = JS_STRING];
+  string content = 4;
+  fixed64 author = 7 [jstype = JS_STRING];
+  optional fixed64 guild_id = 3 [jstype = JS_STRING];
+  optional fixed64 member = 8 [jstype = JS_STRING];
+}
