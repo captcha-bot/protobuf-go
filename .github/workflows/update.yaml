@@ -36,4 +36,4 @@ jobs:
             Version: `${{ github.event.inputs.version }}`
           labels: |
             update
-          reviewers: spencersharkey
+          reviewers: zorotic
